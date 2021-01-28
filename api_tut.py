@@ -12,7 +12,7 @@ import json
 
 
 url = ('http://newsapi.org/v2/everything?'
-       'q=battery&'
+       'q=Elon+Musk&'
        'from=2021-01-27&'
        'sortBy=popularity&'
        'apiKey=d205f0b691144bc0b08de0f03d89b894')
