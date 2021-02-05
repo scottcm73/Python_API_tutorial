@@ -1,27 +1,19 @@
 import requests
 import json
-
-# quotes = requests.get('https://zenquotes.io/api/random')
-# # response = requests.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")
-# print(quotes.status_code)
-# response_text=quotes.text
-# print(quotes.text)
-# quotes_json=quotes.json()
-# print(quotes_json)
+import http.client
+from datetime import datetime 
+import os
 
 
+url = "https://google-news.p.rapidapi.com/v1/topic_headlines"
 
-url = ('http://newsapi.org/v2/everything?'
-       'q=Elon+Musk&'
-       'from=2021-01-27&'
-       'sortBy=popularity&'
-       'apiKey=d205f0b691144bc0b08de0f03d89b894')
+querystring = {"lang":"en","country":"US","topic":"technology"}
+API_KEY = os.environ.get('API_KEY')
+headers = {
+    'x-rapidapi-key': API_KEY,
+    'x-rapidapi-host': "google-news.p.rapidapi.com"
+    }
 
-response = requests.get(url)
+response = requests.request("GET", url, headers=headers, params=querystring)
 
-response_text= response.text
-
-articles_json=response.json()
-
-
-print(articles_json)
+print(response.text)
