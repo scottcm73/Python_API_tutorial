@@ -1,37 +1,24 @@
-# Dog/Cat Classifier
+# Python API Tutorial
 
-This python application will connect with a NASA API. I intend to show how to connect with APIs with python.
+This python application will connect with the GoogleNews API from Rapid API. 
 
 ## Getting Started
-I will use the requests module and 
 
-The untar_data function takes a URL as an argument. It will download and extract the data.
+You must first get an account with RapidApi. Specificall go to:
 
+https://rapidapi.com/marketplace. In the page in the upper right corner (not on the browser menu) click on the three parallel lines. Then, click on Sign Up.
+
+This will take you through the sign up process. Once you sign up search for GoogleNews in the RapidAPI marketplace. 
+
+Then, you get a key for RapidApi's unofficial GoogleNews api. 
+
+Copy the key to a text file outside of this repository
 
 ### Prerequisites
 
-
-For the learning step the of the neural networks you will need to run linux on a system with an NVIDIA GPU (CUDA capable GPU). There are ways around the GPU requirement, put they are extremely slow in comparison. 
-
-I specifically used Linux Ubuntu on a dual-boot PC that I purchased and set up myself. 
-
-Once ubuntu is installed, you must install Fastai, vscode, Kindle and sublime. 
-
-Kindle installation for ubuntu is a bit tricky, because the at the time of installation the latest version did not work with ubuntu, and a previous version was required. 
-
-Kindle is needed to follow along with the Fastai book and course.
-
-Anaconda is also required to get the necessary dependencies
+You will need the GoogleNews api key from RapidAPI. See Getting Started for instructions about getting this api key.
 
 ### Installing
-Details and instructions for the Anaconda installation on linux are at: 
-https://docs.anaconda.com/anaconda/install/linux/
-
-An explanation of the Fastai installation can be found at: https://github.com/fastai/fastai1/blob/master/README.md#installation
-
-Sublime installation instructions are at:
-
-https://linuxize.com/post/how-to-install-sublime-text-3-on-ubuntu-18-04/
 
 
 
@@ -40,31 +27,28 @@ https://linuxize.com/post/how-to-install-sublime-text-3-on-ubuntu-18-04/
 
 ## Running the tests
 
-Testing will be performed locally before deployment.
 
 
 ## Deployment
 
-I will attempt to deploy on a Bluehost VPS running Centos.
+
 
 ## Built With
 
-*  fastai.vision.all
-*  nbdev.showdoc
-*  matplotlib
+*  json
+*  datetime
+*  os
+*  http.client
  
 
 ## Versioning
 
-Github was used for versioning. For the versions available, see https://github.com/scottcm73/dog_cat_classifier
+Github was used for versioning. For the versions available, see https://github.com/scottcm73/Python_API_tutorial
 
 
 ## Author
 
-* The original authors are Jeremy Howard and Sylvain Gugger. 
 
-
-However, I will attempt to deploy the saved model on a system without a gpu once the learning is accomplished. 
 * **Scott McMahan** -- will be the author of the deployed version.
 
 
@@ -75,11 +59,13 @@ However, I will attempt to deploy the saved model on a system without a gpu once
 
 ## Acknowledgment
 
-The majority of the code for this comes from the book, Deep Learning for Coders with fastai and Pytorch. The 
+This project is based on a RapidAPI blog article by Robert Davis at:
+
+https://rapidapi.com/blog/google-news-api-python/
 
 ## Reference
 
-Gugger, S., Howard, J. (2020). Deep Learning for Coders with fastai and Pytorch: AI Applications Without a PhD. O'Reilly Media Inc. 
+Davis, R. (2020, November 17) How to use the Google News API with Python. [blog] RapidApi. https://rapidapi.com/blog/google-news-api-python/
 
 
 
