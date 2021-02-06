@@ -7,10 +7,10 @@ import os
 
 url = "https://google-news.p.rapidapi.com/v1/topic_headlines"
 
-querystring = {"lang":"en","country":"US","topic":"technology"}
-API_KEY = os.environ.get('API_KEY')
+qugerystrin = {"lang":"en","country":"US","topic":"technology"}
+GNews_API_KEY = os.getenv('GNews_API_KEY')
 headers = {
-    'x-rapidapi-key': API_KEY,
+    'x-rapidapi-key': GNews_API_KEY,
     'x-rapidapi-host': "google-news.p.rapidapi.com"
     }
 
