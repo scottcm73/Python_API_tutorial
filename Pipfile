@@ -5,6 +5,9 @@ name = "pypi"
 
 [packages]
 requests = "*"
+pandas = "*"
+newspaper3k = "*"
+googlenews = "*"
 
 [dev-packages]
 
