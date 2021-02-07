@@ -1,19 +1,21 @@
-import requests
+
 import json
+from GoogleNews import GoogleNews
+from newspaper import Article
+import pandas as pd
 import http.client
-from datetime import datetime 
 import os
+GNews_API_Key=os.environ.get('GNews_API_KEY')
 
-
-url = "https://google-news.p.rapidapi.com/v1/topic_headlines"
-
-qugerystrin = {"lang":"en","country":"US","topic":"technology"}
-GNews_API_KEY = os.getenv('GNews_API_KEY')
+print(GNews_API_Key)
+conn = http.client.HTTPSConnection("google-news.p.rapidapi.com")
 headers = {
-    'x-rapidapi-key': GNews_API_KEY,
-    'x-rapidapi-host': "google-news.p.rapidapi.com"
+    'x-rapidapi-host': "google-news.p.rapidapi.com",
+    'x-rapidapi-key': GNews_API_Key,
     }
 
-response = requests.request("GET", url, headers=headers, params=querystring)
+conn.request("GET", "/v1/search?country=US&lang=en&q=Elon%20Musk", headers=headers)
+res = conn.getresponse()
+data = res.read()
+print(data.decode("utf-8"))
 
-print(response.text)
